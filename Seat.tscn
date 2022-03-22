@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/art/Seat_Default.svg" type="Texture" id=1]
+[ext_resource path="res://Seat.gd" type="Script" id=2]
+[ext_resource path="res://Fan.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/art/Seat_Prefilled.svg" type="Texture" id=4]
+[ext_resource path="res://assets/art/Seat_Hover.svg" type="Texture" id=5]
+[ext_resource path="res://assets/art/Seat_Cleared.svg" type="Texture" id=6]
+
+[node name="Seat" type="CenterContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+mouse_default_cursor_shape = 2
+script = ExtResource( 2 )
+
+[node name="Seat" type="TextureRect" parent="."]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hovered" type="TextureRect" parent="."]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 5 )
+
+[node name="Fan" parent="." instance=ExtResource( 3 )]
+margin_left = 24.0
+margin_top = 29.0
+margin_right = 104.0
+margin_bottom = 99.0
+
+[node name="Prefilled" type="TextureRect" parent="."]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 4 )
+
+[node name="Cleared" type="TextureRect" parent="."]
+visible = false
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 6 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_Seat_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Seat_mouse_exited"]

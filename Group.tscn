@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Group.gd" type="Script" id=1]
+[ext_resource path="res://Fan.tscn" type="PackedScene" id=2]
+
+[node name="Group" type="HBoxContainer"]
+mouse_default_cursor_shape = 2
+script = ExtResource( 1 )
+Fan = ExtResource( 2 )
+
+[connection signal="gui_input" from="." to="." method="_on_Group_gui_input"]

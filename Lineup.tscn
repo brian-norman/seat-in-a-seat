@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lineup.gd" type="Script" id=1]
+[ext_resource path="res://styles/RootTheme.tres" type="Theme" id=2]
+
+[node name="Lineup" type="VBoxContainer"]
+theme = ExtResource( 2 )
+custom_constants/separation = 100
+alignment = 1
+script = ExtResource( 1 )
