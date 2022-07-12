@@ -185,7 +185,7 @@ size_flags_vertical = 3
 position = Vector2( 940, 264 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 23 )
-frame = 3
+frame = 16
 playing = true
 
 [node name="NiceTry" type="Label" parent="GameOver"]
