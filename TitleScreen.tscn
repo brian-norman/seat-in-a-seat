@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://styles/RootTheme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/art/Logo.png" type="Texture" id=2]
+
+[node name="TitleScreen" type="Control"]
+pause_mode = 2
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 1920, 1080 )
+theme = ExtResource( 1 )
+
+[node name="Logo" type="TextureRect" parent="."]
+margin_left = 499.0
+margin_top = 376.0
+margin_right = 1421.0
+margin_bottom = 516.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 10.0
+texture = ExtResource( 2 )
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 904.0
+margin_top = 741.0
+margin_right = 1007.0
+margin_bottom = 792.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+text = "Start"
+
+[node name="TutorialButton" type="Button" parent="."]
+margin_left = 851.0
+margin_top = 818.0
+margin_right = 1068.0
+margin_bottom = 882.0
+rect_min_size = Vector2( 192, 64 )
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+text = "How to play"

@@ -38,6 +38,7 @@ func _input(_event):
 		for seat in seats:
 			if seat.showing_potential_fan:
 				seat.filled = true
+				seat.animate_fan_on_filling_seat()
 				seat.showing_potential_fan = false
 				placed = true
 				$PlacingSound.play()

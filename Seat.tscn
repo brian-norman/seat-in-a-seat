@@ -45,5 +45,7 @@ margin_right = 128.0
 margin_bottom = 128.0
 texture = ExtResource( 6 )
 
+[node name="PositionTween" type="Tween" parent="."]
+
 [connection signal="mouse_entered" from="." to="." method="_on_Seat_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Seat_mouse_exited"]

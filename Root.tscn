@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/art/Logo.png" type="Texture" id=5]
 [ext_resource path="res://assets/font/Roboto_Mono/static/RobotoMono-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://styles/RootTheme.tres" type="Theme" id=7]
-[ext_resource path="res://TutorialButtonStyle.tres" type="StyleBox" id=8]
+[ext_resource path="res://styles/TutorialButtonStyle.tres" type="StyleBox" id=8]
 [ext_resource path="res://assets/sounds/Kevin MacLeod - Hustle.mp3" type="AudioStream" id=9]
 [ext_resource path="res://assets/art/Success_Jumping.svg" type="Texture" id=10]
 
@@ -185,7 +185,7 @@ size_flags_vertical = 3
 position = Vector2( 940, 264 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 23 )
-frame = 16
+frame = 4
 playing = true
 
 [node name="NiceTry" type="Label" parent="GameOver"]

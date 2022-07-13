@@ -19,6 +19,16 @@ func _ready():
 		$Prefilled.visible = true
 		$Seat.visible = false
 		$Fan.visible = false
+	
+	$PositionTween.interpolate_property(
+		$Fan,
+		"rect_position",
+		$Fan.rect_position,
+		Vector2($Fan.rect_position.x, $Fan.rect_position.y - 20),
+		1,
+		Tween.TRANS_ELASTIC,
+		Tween.EASE_OUT
+	)
 
 
 func _process(_delta):
@@ -58,6 +68,10 @@ func hide_potential_fan():
 
 func is_prefilled():
 	return randf() < PREFILLED_PROBABILITY
+
+
+func animate_fan_on_filling_seat():
+	$PositionTween.start()
 
 
 func clear():
